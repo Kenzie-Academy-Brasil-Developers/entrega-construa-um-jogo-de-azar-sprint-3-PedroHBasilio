@@ -61,6 +61,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
+        height: 90px;
     }
 
         .btn button{
@@ -81,15 +82,15 @@ body{
         }
 
         #pedra img:hover{
-            width: 150px;
+            width: 120px;
             transition: 0.3s;
         }
         #papel img:hover{
-            width: 150px;
+            width: 120px;
             transition: 0.3s;
         }
         #tesoura img:hover{
-            width: 150px;
+            width: 120px;
             transition: 0.3s;
         }
 
