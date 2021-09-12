@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(44, 44, 44);
+}
+
+#inicial img{
+    width: 300px;
+}
+
+#inicial button{
+    background-color: rgb(44, 44, 44);
+    border: none;
+    cursor: pointer;
+    animation: animacao 2s ease infinite alternate;
+}
+
+@keyframes animacao {
+    from {
+        filter: opacity(100%);
+    }
+    to { 
+        filter: opacity(0%);
+    
+    }
+}
+
+#inicial{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(44, 44, 44);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.choose-page{
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+}
+
+    .classes{
+        color: white;
+        margin-bottom: 30px;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+        .btn button{
+            background-color: rgb(44, 44, 44);
+            border: none;
+        }
+        #pedra img{
+            width: 100px;
+            transition: 0.3s;
+        }
+        #papel img{
+            width: 100px;
+            transition: 0.3s;
+        }
+        #tesoura img{
+            width: 100px;
+            transition: 0.3s;
+        }
+
+        #pedra img:hover{
+            width: 150px;
+            transition: 0.3s;
+        }
+        #papel img:hover{
+            width: 150px;
+            transition: 0.3s;
+        }
+        #tesoura img:hover{
+            width: 150px;
+            transition: 0.3s;
+        }
+
+    #jogar{
+        padding: 10px;
+        background-color:rgb(44, 44, 44);
+        color: rgb(194, 194, 194);
+    }
+
+    .combat{
+        color: white;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+        #player{}
+        #computer{}
+    
+    .result{}
+        #resultado{
+            color: white;
+        }
+
+@media (min-width: 768px){
+    .btn{
+        flex-direction: row;
+    }
+}
+
