@@ -1,5 +1,6 @@
 body{
     background-color: rgb(44, 44, 44);
+    /* font-size: 26px; */
 }
 
 #inicial img{
@@ -50,8 +51,10 @@ body{
 }
 
     .classes{
+        font-family: 'VT323', monospace;
         color: white;
         margin-bottom: 30px;
+        font-size: 24px;
     }
 
     .btn{
@@ -91,6 +94,8 @@ body{
         }
 
     #jogar{
+        font-family: 'VT323', monospace;
+        font-size: 24px;
         padding: 10px;
         background-color:rgb(44, 44, 44);
         color: rgb(194, 194, 194);
@@ -104,12 +109,20 @@ body{
         align-items: center;
         justify-content: space-evenly;
     }
-        #player{}
-        #computer{}
+        #player{
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+        }
+        #computer{
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+        }
     
     .result{}
         #resultado{
             color: white;
+            font-family: 'VT323', monospace;  
+            font-size: 22px;          
         }
 
 @media (min-width: 768px){
