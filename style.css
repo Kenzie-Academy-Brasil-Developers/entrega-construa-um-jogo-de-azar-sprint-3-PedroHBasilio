@@ -61,7 +61,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
-        height: 90px;
+        height: 240px;
     }
 
         .btn button{
@@ -129,6 +129,7 @@ body{
 @media (min-width: 768px){
     .btn{
         flex-direction: row;
+        height: 90px;
     }
 }
 
