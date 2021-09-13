@@ -26,7 +26,7 @@ body{
 
 #inicial{
     position: absolute;
-    top: 20px;
+    top: 10px;
     width: 100%;
     margin: 0 auto;
     background-color: rgb(44, 44, 44);
@@ -151,6 +151,10 @@ body{
     .btn{
         flex-direction: row;
         height: 90px;
+    }
+
+    .choose-page {
+        margin-top: 90px;
     }
 }
 
