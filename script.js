@@ -1,10 +1,12 @@
 function computer(){
     const choice = ['Água', 'Fogo', 'Grama']
     const computer = document.getElementById('computer')
+    const versus = document.getElementById('versus')
 
     let random =  Math.floor(Math.random() * (3 - 0) + 0);
 
     computer.innerHTML = `${choice[random]}`
+    versus.innerHTML = 'X'
 }
 //computer()
 
@@ -14,25 +16,27 @@ function player(){
     const tesoura = document.getElementById('tesoura')
 
     const player = document.getElementById('player')
-
     const computer = document.getElementById('computer')
-
     const result = document.getElementById('resultado')
+    const versus = document.getElementById('versus')
 
     pedra.addEventListener('click', () =>{
         result.innerHTML = ''
+        versus.innerHTML = ''
         computer.innerHTML = ''
         player.innerHTML = 'Grama'
     })
 
     papel.addEventListener('click', () =>{
         result.innerHTML = ''
+        versus.innerHTML = ''
         computer.innerHTML = ''
         player.innerHTML = 'Fogo'
     })
 
     tesoura.addEventListener('click', () =>{
         result.innerHTML = ''
+        versus.innerHTML = ''
         computer.innerHTML = ''
         player.innerHTML = 'Água'
     })
@@ -40,30 +44,49 @@ function player(){
 }
 //player()
 
+let pointsA = 0;
+let pointsR = 0;
+
 function victory(){
     const player = document.getElementById('player')
     const computer = document.getElementById('computer')
     const result = document.getElementById('resultado')
+    const teamR = document.getElementById('TR-points')
+    const ash = document.getElementById('A-points') 
+
+    
 
     //player win
     if(computer.innerHTML == 'Grama' && player.innerHTML == 'Fogo'){
         result.innerHTML = 'Você ganhou'
+        pointsA ++
+        ash.innerText = pointsA
     }
     if(computer.innerHTML == 'Fogo' && player.innerHTML == 'Água'){
         result.innerHTML = 'Você ganhou'
+        pointsA ++
+        ash.innerText = pointsA
     }
     if(computer.innerHTML == 'Água' && player.innerHTML == 'Grama'){
         result.innerHTML = 'Você ganhou'
+        pointsA ++
+        ash.innerText = pointsA
     }
     //computer win
     if(player.innerHTML == 'Grama' && computer.innerHTML == 'Fogo'){
-        result.innerHTML = 'Computador ganhou'
+        result.innerHTML = 'Não foi dessa vez!'
+        pointsR ++
+        teamR.innerText = pointsR
     }
     if(player.innerHTML == 'Fogo' && computer.innerHTML == 'Água'){
-        result.innerHTML = 'Computador ganhou'
+        result.innerHTML = 'Não foi dessa vez!'
+        pointsR ++
+        teamR.innerText = pointsR
     }
     if(player.innerHTML == 'Água' && computer.innerHTML == 'Grama'){
-        result.innerHTML = 'Computador ganhou'
+        result.innerHTML = 'Não foi dessa vez!'
+        pointsR ++
+        teamR.innerText = pointsR
     }
     //empate
     if(player.innerHTML == 'Grama' && computer.innerHTML == 'Grama'){
@@ -91,8 +114,6 @@ function jokenpo(){
     jogar.addEventListener("click", () => {
         computer()
         victory()
-
-
     })
 
 }
