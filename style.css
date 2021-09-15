@@ -35,6 +35,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .hidden{
@@ -60,6 +61,7 @@ body{
         display: flex;
         margin-top: 20px;
         justify-content: space-between;
+        width: 210px;
     }
 
         .points_team{
@@ -70,91 +72,189 @@ body{
             #TR-points{}
             #A-points{}
 
-    .btn{
+    .second-page{
+        background-color: rgb(44, 44, 44);
+        z-index: 1;
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
-        height: 240px;
+        align-items: center;
     }
 
-        .btn button{
+    #choose{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 50px;
+        height: 310px;
+    }
+
+        #choose button{
             background-color: rgb(44, 44, 44);
             border: none;
         }
+
+        .animation_choose{
+            animation: choose_poke 2s ease 1 alternate;
+            animation-fill-mode: both;
+        }
+            
+            @keyframes choose_poke {
+                from {
+                    transform: translateX(0px);
+                }
+                to { 
+                    transform: translateX(-500px);              
+                }
+            }
+
         #pedra img{
             width: 100px;
-            transition: 0.3s;
+            transition: 2s;
+            cursor: pointer;
         }
         #papel img{
             width: 100px;
-            transition: 0.3s;
+            transition: 2s;
+            cursor: pointer;
         }
         #tesoura img{
             width: 100px;
-            transition: 0.3s;
+            transition: 2s;
+            cursor: pointer;
         }
-
+/* 
         #pedra img:hover{
-            width: 120px;
+            width: 110px;
             transition: 0.3s;
         }
         #papel img:hover{
-            width: 120px;
+            width: 110px;
             transition: 0.3s;
         }
         #tesoura img:hover{
-            width: 120px;
+            width: 110px;
             transition: 0.3s;
-        }
+        } */
 
-    #jogar{
-        font-family: 'VT323', monospace;
-        font-size: 24px;
-        padding: 10px;
-        background-color:rgb(44, 44, 44);
-        color: rgb(194, 194, 194);
-    }
+        #jogar{
+            font-family: 'VT323', monospace;
+            font-size: 24px;
+            padding: 10px;
+            background-color:rgb(44, 44, 44);
+            color: rgb(194, 194, 194);
+            z-index: 1;
+        }
 
     .combat{
         color: white;
-        height: 70px;
+        height: 210px;
+        width: 250px;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
     }
         #player{
             font-family: 'VT323', monospace;
             font-size: 18px;
+            display: none;
         }
+            .player_entrance{
+                animation: imagem 1s ease 1 alternate;
+            }
+            
+            @keyframes imagem {
+                from {
+                    transform: translateX(-100px);
+                }
+                to { 
+                    transform: translateX(0px);              
+                }
+            }
+
         #computer{
             font-family: 'VT323', monospace;
             font-size: 18px;
+            display: none;
+        }
+        .pc_entrance{
+            animation: pc_imagem 1s ease 1 alternate;
+        }
+        
+        @keyframes pc_imagem {
+            from {
+                transform: translateX(100px);
+            }
+            to { 
+                transform: translateX(0px);              
+            }
         }
 
         #computer img{
-            width: 80px;
+            width: 100px;
         }
     
     .result{}
         #resultado{
             color: white;
             font-family: 'VT323', monospace;  
-            font-size: 22px;          
+            font-size: 34px;          
         }
 
     .last{
         margin: 15px 0;
+        width: 300px;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        position: absolute;
+        top: 130px;
+        z-index: 0;
     }
 
+        .last img{
+            width: 90px;
+        }
+
+        #back{
+            font-family: 'VT323', monospace;
+            font-size: 24px;
+            padding: 10px;
+            background-color: rgb(44, 44, 44);
+            color: rgb(194, 194, 194);
+        }
+
 @media (min-width: 768px){
-    .btn{
+    #choose{
         flex-direction: row;
-        height: 90px;
+        height: 210px;
     }
 
     .choose-page {
         margin-top: 90px;
     }
+
+    .combat{
+        height: 180px;
+        margin-top: 30px;
+    }
+
+    .animation_choose{
+        animation: choose_poke 1s ease 1 alternate;
+        animation-fill-mode: both;
+    }
+
+        @keyframes choose_poke {
+            from {
+                transform: translatey(0px);
+            }
+            to { 
+                transform: translatey(-50px);              
+            }
+        }
 }
 
+.hidden{
+    visibility: hidden;
+}

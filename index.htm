@@ -24,51 +24,57 @@
     <div class="choose-page">
         
         <div class="classes">
-            <p>Fogo > Grama > Agua ></p>
 
-            <div class="points">
+            <div class="points">                
+                <div class="points_team">
+                    <p>Você</p>
+                    <span id="A-points">0</span>
+                </div>
+
                 <div class="points_team">
                     <p>Team Rocket</p>
                     <span id="TR-points">0</span>
                 </div>
-
-                <div class="points_team">
-                    <p>Ash</p>
-                    <span id="A-points">0</span>
-                </div>
             </div>
         </div>
 
-        <div class="btn">
-            <button id="pedra"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/c5ffaa9bc5803d0.png" alt=""></button>
-            <button id="papel"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ac2826f88646e6e.png" alt=""></button>
-            <button id="tesoura"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/63a98e1dbcfbe96.png" alt=""></button>
-        </div>
+        <div class="second-page">
+            <div id="choose">
+                <button id="pedra"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/c5ffaa9bc5803d0.png" alt=""></button>
+                <button id="papel"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ac2826f88646e6e.png" alt=""></button>
+                <button id="tesoura"><img src="https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/63a98e1dbcfbe96.png" alt=""></button>
+            </div>
 
-        <div>
-            <button id="jogar"> Fight! </button>
+            <div class="fight">
+                <button id="jogar"> Fight! </button>
+            </div>
         </div>
 
         <div class="last">
         
         <div class="combat">
             <span id="player"></span>
+            <span id = 'playerImg'></span>
             <span id="versus"></span>
             <span id="computer"></span>
+            <span id = 'pcImg'></span>
         </div>
         
         <div class="result">
             <p id="resultado"></p>
         </div>
 
+        <div>
+            <button id="back">choose your pokémon</button>
+        </div>
         </div>
         
     </div>
 
-    <audio autoplay="autoplay" loop = "loop">
+    <!-- <audio autoplay="autoplay" loop = "loop" controls = "controls">
         <source src="./audio/WhatsApp Audio 2021-09-12 at 17.21.37.m4a" type="audio/mp4" />
         seu navegador não suporta HTML5
-    </audio>
+    </audio> -->
 
     <script src="./script.js"></script>    
 </body>
