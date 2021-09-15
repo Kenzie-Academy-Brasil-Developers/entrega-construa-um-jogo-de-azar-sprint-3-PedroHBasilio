@@ -185,3 +185,9 @@ function voltar(){
     })
 }
 voltar()
+
+function sound(){
+    const audio = document.querySelector('audio')
+    audio.play()
+}
+sound()
